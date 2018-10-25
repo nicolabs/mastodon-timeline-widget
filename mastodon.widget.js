@@ -132,7 +132,7 @@ MastodonApi.text = {
 	,spoilerBtnOpened : "Show less"
 	,nsfwLabel        : "NSFW"
 	,nsfwViewMsg      : "Click to view"
-	,title						: "Toots"
+	,title						: "Latest toots..."
 	,byAuthor					: "by"
 	,loading					: "loading..."
 	,error 						: "ERROR"
@@ -146,7 +146,7 @@ MastodonApi.text = {
  */
 MastodonApi.prototype.makeWidget = function() {
 	this.widget.addClass('mastodon-timeline');
-	this.widget.append($('<div class="mt-header"><h4>'+MastodonApi.text.title+'</h4> '+MastodonApi.text.byAuthor+' <span class="user-link"></span></div>'));
+	this.widget.append($('<div class="mt-header"><h4>'+MastodonApi.text.title+'</h4></div>'));
 	this.widget.append($('<div class="mt-body"><div class="mt-loading">'+MastodonApi.text.loading+'</div></div>'));
 	this.widget.append($('<div class="mt-footer"></div>'));
 };
@@ -394,7 +394,7 @@ MastodonApi.prototype.replaceMedias = function(content, media_, nsfw_) {
 	}
 	else {
 		// pics visible
-		var pic = '<div class="toot-media-preview" style="background-image:url('+media_.preview_url+');"></div>';
+		var pic = '<a href="'+media_.preview_url+'"><div class="toot-media-preview" style="background-image:url('+media_.preview_url+');"></div></a>';
 	}
 
 	return pic;
