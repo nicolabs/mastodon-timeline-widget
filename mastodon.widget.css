@@ -42,6 +42,14 @@
 	margin-bottom: 0;
 }
 
+.mt-date .nsfw {
+	background: black;
+	color: white;
+	margin-right: .5em;
+	padding: 0 3px;
+	border-radius: 2px;
+}
+
 .mt-avatar {
 	position: absolute;
 	top: 5px;
