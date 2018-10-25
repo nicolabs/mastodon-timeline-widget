@@ -1,5 +1,7 @@
 [English version](README_en.md)
 
+Fork of https://github.com/AzetJP/mastodon-timeline-widget.
+
 # Mastodon.widgetについて
 
 このJSで作られたウィジェットはあなたのホームページにマストドンのタイムラインを表示します。
