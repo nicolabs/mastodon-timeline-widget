@@ -288,7 +288,7 @@ MastodonApi.prototype.listStatuses = function() {
 			user = $("<div class='mt-user'><a href='"+status_.account.url+"'>"+status_.account.username+"</a></div>");
 
 			// media attachments from this toot
-			medias = status_.reblog.media_attachments;
+			medias = status_.media_attachments;
 
 			// this toot's sensitivity
 			sensitive = status_.sensitive;
@@ -406,7 +406,7 @@ MastodonApi.prototype.replaceMedias = function(content, media_, nsfw_) {
 	}
 	else {
 		// pics visible
-		var pic = '<a href="'+media_.preview_url+'"><div class="toot-media-preview" style="background-image:url('+media_.preview_url+');"></div></a>';
+		var pic = '<a href="'+media_.url+'"><div class="toot-media-preview" style="background-image:url('+media_.preview_url+');"></div></a>';
 	}
 
 	return pic;
